@@ -37,7 +37,7 @@
                                 <a class="menu-item" href="/home">Home</a>
                                 <a class="menu-item" href="/service">Services</a>
                                 <hr class="menu-divider">
-                                <a class="menu-item" href="about">About Us</a>
+                                <a class="menu-item" href="/about">About Us</a>
                             </div>
                         </li>
                     </ul>
