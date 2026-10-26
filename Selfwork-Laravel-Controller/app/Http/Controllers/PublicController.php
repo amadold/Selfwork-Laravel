@@ -45,13 +45,20 @@ class PublicController extends Controller
             ['id' => 6, 'title' => 'Switzerland', 'img' => '/media/pexels-suissounet-16458279.jpg', 'description' => 'The best of nature and discover the peacefulness of life'],
         ];
 
+        $services = [
+            ['id' => 1, 'title' => 'Rental', 'img' => '/media/Gemini_Generated_Image_azs43mazs43mazs4.jpg'],
+            ['id' => 2, 'title' => 'Flights', 'img' => '/media/Gemini_Generated_Image_vne7z4vne7z4vne7.jpg'],
+            ['id' => 3, 'title' => 'Hotels', 'img' => '/media/Gemini_Generated_Image_vzn0mjvzn0mjvzn0.jpg'],
+            ['id' => 4, 'title' => 'Packages', 'img' => '/media/Gemini_Generated_Image_3ekr1w3ekr1w3ekr.jpg'],
+        ];
         foreach ($details as $detail) {
             if ($detail['id'] == $id) {
 
-                return view('detail', ['detail' => $detail]);
+                return view('detail', ['detail' => $detail], ['services' => $services]);
             }
         }
     }
+
     public function service()
     {
         $destinations = [
