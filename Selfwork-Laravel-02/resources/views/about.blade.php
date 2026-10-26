@@ -13,44 +13,27 @@
 
 <body>
     {{-- Navbar --}}
-    <nav class="navbar md:navbar-expand bg-1">
+    <nav class="navbar sm:navbar-expand bg-1 fg-2">
         <div class="container-fluid">
             <a class="navbar-brand" href="/"><img class="nav-img"
                     src="/media/Gemini_Generated_Image_3ekr1w3ekr1w3ekr.jpg" alt="Logo"></a>
             <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer"
-                data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" aria-hidden="true"></span>
             </button>
-            <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+            <dialog class="drawer drawer-end align-items-center justify-content-center" tabindex="-1"
+                id="navbarNavAltMarkup" aria-labelledby="navbarNavAltMarkupLabel">
                 <div class="drawer-header">
-                    <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
+                    <h5 class="drawer-title" id="navbarNavAltMarkupLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
                 </div>
-                <div class="drawer-body mb-2 md:mb-0">
-                    <ul class="nav navbar-nav me-auto">
-                        <li class="nav-item">
-                            <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
-                                Menu
-                            </button>
-                            <div class="menu">
-                                <a class="menu-item" href="/home">Home</a>
-                                <a class="menu-item" href="/service">Services</a>
-                                <hr class="menu-divider">
-                                <a class="menu-item" href="about">About Us</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <form class="hstack gap-2" role="search">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn-solid btn-icon theme-secondary" type="submit">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                            </svg>
-                        </button>
-                    </form>
+                <div class="drawer-body">
+                    <div class="nav nav-pills navbar-nav">
+                        <a class="nav-link" href="/home">Home</a>
+                        <a class="nav-link" href="/service">Services</a>
+                        <a class="nav-link active" aria-current="page" href="/about">About Us</a>
+                    </div>
                 </div>
             </dialog>
         </div>
@@ -70,6 +53,58 @@
             <p>Lorem ipsum dolor sit amet.</p>
         </div>
 
+        {{-- Form --}}
+
+        <h2 class="text-center my-5">Registration</h2>
+        <div class=" d-flex align-items-center justify-content-center registration">
+            <form class="row g-3 container">
+                <div class="md:col-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4">
+                </div>
+                <div class="md:col-6">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress2" class="form-label">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2"
+                        placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="md:col-6">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="md:col-4">
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="md:col-2">
+                    <label for="inputZip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-12">
+                    <div class="form-field">
+                        <input type="checkbox" id="gridCheck" class="check">
+                        <label for="gridCheck">
+                            Subscribe to our newsletter
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button onclick="alert('Registration completed')" type="submit"
+                        class="btn-solid theme-primary">Sign in</button>
+                </div>
+            </form>
+        </div>
+
         {{-- FAQ --}}
 
         <h1 class="text-center my-5">FAQ</h1>
@@ -77,8 +112,8 @@
             <details class="accordion-item" name="accordionExample" open>
                 <summary class="accordion-header">
                     Accordion Item #1
-                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none"
-                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                         <path d="m2 5 6 6 6-6" />
                     </svg>
                 </summary>
@@ -92,8 +127,8 @@
             <details class="accordion-item" name="accordionExample">
                 <summary class="accordion-header">
                     Accordion Item #2
-                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none"
-                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                         <path d="m2 5 6 6 6-6" />
                     </svg>
                 </summary>
