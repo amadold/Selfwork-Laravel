@@ -26,9 +26,9 @@ class PublicController extends Controller
             ['id' => 1, 'title' => 'Rental', 'img' => '/media/Gemini_Generated_Image_azs43mazs43mazs4.jpg'],
             ['id' => 2, 'title' => 'Flights', 'img' => '/media/Gemini_Generated_Image_vne7z4vne7z4vne7.jpg'],
             ['id' => 3, 'title' => 'Hotels', 'img' => '/media/Gemini_Generated_Image_vzn0mjvzn0mjvzn0.jpg'],
-            ['id' => 4, 'title' => 'Packages', 'img' => '/media/Gemini_Generated_Image_3ekr1w3ekr1w3ekr.jpg'],
+            ['id' => 4, 'title' => 'Document Assistance', 'img' => '/media/Gemini_Generated_Image_3ekr1w3ekr1w3ekr.jpg'],
         ];
-        return view('home', compact('destinations', 'services'));
+        return view('home', ['destinations' => $destinations, 'services' => $services]);
     }
     public function about()
     {
@@ -69,6 +69,14 @@ class PublicController extends Controller
             ['id' => 5, 'title' => 'France', 'img' => '/media/pexels-michael-james-beach-737731076-29857931.jpg'],
             ['id' => 6, 'title' => 'Switzerland', 'img' => '/media/pexels-suissounet-16458279.jpg'],
         ];
-        return view('service', ['destinations' => $destinations]);
+
+        $services = [
+            ['id' => 1, 'title' => 'Rental', 'img' => '/media/Gemini_Generated_Image_azs43mazs43mazs4.jpg'],
+            ['id' => 2, 'title' => 'Flights', 'img' => '/media/Gemini_Generated_Image_vne7z4vne7z4vne7.jpg'],
+            ['id' => 3, 'title' => 'Hotels', 'img' => '/media/Gemini_Generated_Image_vzn0mjvzn0mjvzn0.jpg'],
+            ['id' => 4, 'title' => 'Document Assistance', 'img' => '/media/Gemini_Generated_Image_3ekr1w3ekr1w3ekr.jpg'],
+        ];
+
+        return view('service', ['destinations' => $destinations, 'services' => $services]);
     }
 }

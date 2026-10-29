@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     {{-- Navbar --}}
     <nav class="navbar sm:navbar-expand bg-1 fg-2">
         <div class="container-fluid">
@@ -47,6 +48,7 @@
     <main>
         {{ $slot }}
     </main>
+
     {{-- Footer --}}
     <footer class="bg-dark text-white text-center">
         <div class="container d-flex align-items-center justify-content-evenly">

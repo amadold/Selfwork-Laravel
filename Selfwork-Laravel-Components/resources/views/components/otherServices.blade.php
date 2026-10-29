@@ -1,5 +1,3 @@
-@props(['services'])
-
 <section class="container d-flex aling-items-center justify-content-evenly mb-5">
     <div class="row row-cols-12 row-cols-md-3">
         @foreach ($services as $service)
